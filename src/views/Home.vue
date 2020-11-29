@@ -1,0 +1,39 @@
+<template>
+  <div>
+    <app-header></app-header>
+    <nav-container ref="nav" :content="categories" :cssClass="'fixed top-0 bottom-0 left-0 z-10'"></nav-container>
+    <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'"></grid-container>
+    <!-- <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'" :style="`margin-left: ${setGridOffset}`"></grid-container> -->
+  </div>
+</template>
+
+<script>
+import AppHeader from '@/components/AppHeader.vue'
+import GridContainer from '@/components/grid/GridContainer.vue'
+import NavContainer from '@/components/nav/NavContainer.vue'
+import gridItems from '@/components/grid/grid-items.js';
+import navItems from '@/components/nav/nav-items.js';
+
+export default {
+  name: 'Home',
+  components: {
+      AppHeader,
+      GridContainer,
+      NavContainer,
+  },
+  // computed: {
+  //   setGridOffset() {
+  //     return this.$refs.nav.$el.clientWidth;
+  //   }
+  // },
+  // mounted() {
+  //   this.$refs.grid.$el.offsetLeft = this.setGridOffset;
+  // },
+  data () {
+    return {
+      videos: gridItems,
+      categories: navItems,
+    }
+  }
+}
+</script>

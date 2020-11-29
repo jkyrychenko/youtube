@@ -1,8 +1,8 @@
 <template>
   <div>
     <app-header></app-header>
-    <nav-container ref="nav" :content="categories" :cssClass="'fixed top-0 bottom-0 left-0 z-10'"></nav-container>
-    <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'"></grid-container>
+    <nav-container ref="nav" :content="categories" :cssClass="'fixed top-0 bottom-0 left-0 z-10'" style="width: 230px"></nav-container>
+    <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'" style="margin-left: 230px"></grid-container>
     <!-- <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'" :style="`margin-left: ${setGridOffset}`"></grid-container> -->
   </div>
 </template>

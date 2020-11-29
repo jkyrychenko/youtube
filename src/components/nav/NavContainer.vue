@@ -2,9 +2,9 @@
   <div
    :class="cssClass"
    class="bg-white text-gray-800 w-64 overflow-x-auto">
-    <div class="py-4 px-6 border-b border-gray-600">
+    <div class="py-4 px-6 border-b border-gray-600 flex flex-auto items-center">
       <icon-button :icon="icons.menu" class="mr-8 text-2xl"></icon-button>
-      <icon-button :icon="icons.logo" class="text-2xl"></icon-button>
+      <a href="#" class="w-24 h-6"><img :src="icons.logo" alt=""></a>
     </div>
     <nav-block
       v-for="category in content"
@@ -29,7 +29,6 @@
 import IconButton from '@/components/IconButton.vue'
 import NavBlock from '@/components/nav/NavBlock.vue'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 export default {
   name: 'NavContainer',
@@ -51,7 +50,7 @@ export default {
     return {
       icons: {
         menu: faBars,
-        logo: faYoutube,
+        logo: require('@/assets/images/youtube.svg'),
       },
       links: [
         {

@@ -1,7 +1,7 @@
 <template>
   <div class="sticky top-0 bg-white border-b border-gray-600 z-20 flex flex-auto items-center justify-between py-4 px-6 text-gray-800">
     <div class="flex items-center">
-      <icon-button :icon="icons.menu" class="mr-8 text-2xl"></icon-button>
+      <icon-button :icon="icons.menu" class="mr-8 text-2xl" @clicked="menuBtnClicked"></icon-button>
       <a href="#" class="w-24 h-6"><img :src="icons.logo" alt=""></a>
     </div>
     <div class="w-6/12">
@@ -26,6 +26,11 @@ export default {
   components: {
     IconButton,
     SearchForm
+  },
+  methods: {
+    menuBtnClicked() {
+      this.$emit('toggle-nav');
+    }
   },
   data() {
     return {

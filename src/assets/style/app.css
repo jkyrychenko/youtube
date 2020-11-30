@@ -19,3 +19,6 @@ html {
 *::-webkit-scrollbar {
     display: none;
 }
+a, button, input {
+    outline: none!important;
+}

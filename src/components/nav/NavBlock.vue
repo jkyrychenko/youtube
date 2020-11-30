@@ -1,13 +1,16 @@
 <template>
-  <div class="border-b border-gray-600 py-4">
-      <h3 v-if="title" class="uppercase font-bold text-gray-900 py-4 px-6">{{ title }}</h3>
+  <div 
+    v-if="showedItems.length"
+    :class="{ 'border-b border-gray-600 py-0' : !collapsed }">
+      <h3 v-if="title" class="uppercase font-bold text-gray-900 pt-6 pb-4 px-6">{{ title }}</h3>
       <nav-item
-        v-for="item in items"
+        v-for="item in showedItems"
         :key="item.title"
         :title="item.title"
         :icon="icons[item.icon]"
         :isShowedMin="item.isShowedMin"
         :isActive="item.isActive"
+        :collapsed="collapsed"
       ></nav-item>
   </div>
 </template>
@@ -30,6 +33,18 @@ export default {
     items: {
       type: Array,
       default: () => [],
+    },
+    collapsed: {
+      type: Boolean,
+      default: false,
+    }
+  },
+  computed: {
+    showedItems() {
+      if(this.collapsed) {
+        return this.items.filter(item => item.isShowedMin)
+      }
+      return this.items
     }
   },
   data() {

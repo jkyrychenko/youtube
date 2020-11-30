@@ -1,11 +1,17 @@
 <template>
   <div
-    :class="{ 'bg-gray-700': isActive }"
-    class="py-4 px-6 cursor-pointer flex flex-auto hover:bg-gray-600">
-    <div class="flex-shrink-0 w-12">
+    :class="{ 'bg-gray-600 hover:bg-gray-700': isActive, 'flex-col px-1' : collapsed, 'px-6' : !collapsed }"
+    class="py-4 cursor-pointer flex flex-auto hover:bg-gray-500">
+    <div
+      :class="{ 'w-auto text-center' : collapsed, 'w-12' : !collapsed }"
+      class="flex-shrink-0">
         <font-awesome-icon :icon="icon" class="text-xl" :class="{ 'text-red-900' : isActive }"/>
     </div>
-    <div class="text-gray-900">{{ title }}</div>
+    <div
+      class="text-gray-900"
+      :class="{ 'text-xs pt-2 text-center' : collapsed }">
+      {{ title }}
+    </div>
   </div>
 </template>
 
@@ -27,6 +33,10 @@ export default {
       default: () => {},
     },
     isActive: {
+      type: Boolean,
+      default: false,
+    },
+    collapsed: {
       type: Boolean,
       default: false,
     }

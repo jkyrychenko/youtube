@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-header></app-header>
-    <nav-container ref="nav" :content="categories" :cssClass="'fixed top-0 bottom-0 left-0 z-10'" style="width: 230px"></nav-container>
+    <app-header @toggle-nav="toggleNav"></app-header>
+    <nav-container ref="nav" :content="categories" :collapsed="isNavCollapsed" :cssClass="'fixed top-0 bottom-0 left-0 z-10'" style="width: 230px"></nav-container>
     <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'" style="margin-left: 230px"></grid-container>
     <!-- <grid-container ref="grid" :content="videos" :cssClass="'bg-gray-500'" :style="`margin-left: ${setGridOffset}`"></grid-container> -->
   </div>
@@ -29,8 +29,14 @@ export default {
   // mounted() {
   //   this.$refs.grid.$el.offsetLeft = this.setGridOffset;
   // },
+  methods: {
+    toggleNav() {
+      this.isNavCollapsed = !this.isNavCollapsed
+    }
+  },
   data () {
     return {
+      isNavCollapsed: false,
       videos: gridItems,
       categories: navItems,
     }

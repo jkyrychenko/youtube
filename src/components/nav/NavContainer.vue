@@ -11,8 +11,9 @@
       :key="category.id"
       :title="category.title"
       :items="category.items"
+      :collapsed="collapsed"
     ></nav-block>
-    <div class="py-4 px-6">
+    <div v-if="!collapsed" class="py-4 px-6">
       <a
         class="text-gray-800 text-sm font-bold mr-2 inline-block whitespace-no-wrap"
         v-for="link in links"
@@ -44,6 +45,10 @@ export default {
     cssClass: {
       tyle: String,
       default: '',
+    },
+    collapsed: {
+      tyle: Boolean,
+      default: false,
     },
   },
   data() {

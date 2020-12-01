@@ -1,6 +1,7 @@
 <template>
   <button
     type="button"
+    class="icon-btn relative w-12 h-12 rounded-full hover:bg-gray-600 transition duration-500 ease-in-out"
     @click.prevent="clicked">
     <font-awesome-icon :icon="icon"/>
     <slot></slot>

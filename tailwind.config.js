@@ -21,16 +21,17 @@ module.exports = {
         red: {
           900: '#f00',
         }
-      },
+      }
     }
   },
   variants: {
     extend: {
-      inset: {
-        bottom: {
-          2: '0.5rem',
-        }
-      },
+      backgroundColor: ['active'],
+    },
+    inset: {
+      bottom: {
+        2: '0.5rem',
+      }
     }
   },
   plugins: [],

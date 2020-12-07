@@ -2,7 +2,7 @@
   <div 
     v-if="showedItems.length"
     :class="{ 'border-b border-gray-600 py-0' : !collapsed }">
-      <h3 v-if="title" class="uppercase font-bold text-gray-900 pt-6 pb-4 px-6">{{ title }}</h3>
+      <h3 v-if="title" class="uppercase font-bold text-gray-900 pt-4 pb-4 px-6">{{ title }}</h3>
       <nav-item
         v-for="item in showedItems"
         :key="item.title"

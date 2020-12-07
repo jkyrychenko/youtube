@@ -6,12 +6,12 @@
     }"
     class="py-4 cursor-pointer flex flex-auto whitespace-no-wrap hover:bg-gray-500">
     <div
-      :class="{ 'w-auto text-center' : collapsed, 'w-12' : !collapsed }"
-      class="flex-shrink-0">
+      :class="{ 'w-auto text-center' : collapsed, 'w-12 mr-4' : !collapsed }"
+      class="flex items-center flex-shrink-0">
         <font-awesome-icon
           :icon="icon" 
-          class="text-xl"
-          :class="{ 'text-red-900' : isActive, iconClass : iconClass.length }"/>
+          class="text-xl m-auto"
+          :class="{ 'text-red-900' : isActive, iconClass : iconClass }"/>
     </div>
     <div
       class="text-gray-900"

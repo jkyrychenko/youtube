@@ -1,7 +1,7 @@
 <template>
   <div
     :class="cssClass"
-    class="grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-6 p-6">
+    class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-6 p-6">
       <grid-item
         v-for="(video, n) in content"
         :key="video.id + n"

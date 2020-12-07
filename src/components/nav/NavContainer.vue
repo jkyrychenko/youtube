@@ -2,7 +2,7 @@
   <div
    :class="cssClass"
    class="bg-white text-gray-800 w-64 overflow-x-auto">
-    <div class="py-4 px-6 border-b border-gray-600 flex flex-auto items-center">
+    <div class="py-2 px-6 border-b border-gray-600 flex flex-auto items-center">
       <icon-button :icon="icons.menu" class="mr-8 text-2xl"></icon-button>
       <a href="#" class="w-24 h-6"><img :src="icons.logo" alt=""></a>
     </div>

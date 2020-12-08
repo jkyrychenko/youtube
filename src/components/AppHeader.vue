@@ -8,8 +8,8 @@
       <search-form></search-form>
     </div>
     <div class="flex flex-auto justify-end items-center">
-      <icon-button :icon="icons.create" :dropdown="dropdownItems.create" class="mr-4 text-xl"></icon-button>
-      <icon-button :icon="icons.apps" :dropdown="dropdownItems.apps" class="mr-4 text-xl"></icon-button>
+      <dropdown-button :icon="icons.create" :dropdown="dropdownItems.create" class="mr-4 text-xl"></dropdown-button>
+      <dropdown-button :icon="icons.apps" :dropdown="dropdownItems.apps" class="mr-4 text-xl"></dropdown-button>
       <icon-button :icon="icons.notify" class="text-xl"></icon-button>
     </div>
   </div>
@@ -18,6 +18,7 @@
 <script>
 import IconButton from '@/components/IconButton.vue'
 import SearchForm from '@/components/SearchForm.vue'
+import DropdownButton from '@/components/DropdownButton.vue'
 import { faBars, faVideo, faBell, faCaretSquareRight, faBroadcastTower, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { faBuromobelexperte, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
@@ -26,6 +27,7 @@ export default {
   components: {
     IconButton,
     SearchForm,
+    DropdownButton,
   },
   methods: {
     menuBtnClicked() {

@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <icon-button :icon="icon" class="mr-4 text-xl" @clicked="toggleDropdown"></icon-button>
+    <icon-button :icon="icon" class="text-xl" @clicked="toggleDropdown"></icon-button>
     <div
       ref="dropdown"
       v-if="dropdown.length && isDropdownVisible"
@@ -22,7 +22,7 @@ import IconButton from '@/components/IconButton.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 export default {
-  name: 'DropdownBtn',
+  name: 'DropdownButton',
   components: {
     IconButton,
     FontAwesomeIcon

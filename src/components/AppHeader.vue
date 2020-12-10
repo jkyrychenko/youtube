@@ -103,6 +103,30 @@ export default {
             img: 'https://i.ytimg.com/vi/03s-bhFBQA8/hqdefault_live.jpg',
             url: 'https://www.youtube.com/watch?v=03s-bhFBQA8',
           },
+          {
+            logo: 'https://lh3.googleusercontent.com/-jM5f5ynDgv0/AAAAAAAAAAI/AAAAAAAAAAA/NoEQqx6P-lQ/s96-mo/photo.jpg',
+            chanel: 'Телебачення Торонто',
+            title: '"Референдум! Потрібен він комусь чи? ЩЕ з Максом Щербиною" зараз у каналі "Телебачення Торонто"',
+            date: '3 hours ago',
+            img: 'https://i.ytimg.com/vi/Yuv37_GKNoo/hqdefault.jpg',
+            url: 'https://www.youtube.com/watch?v=Yuv37_GKNoo',
+          },
+          {
+            logo: 'https://lh5.googleusercontent.com/-R5LTpQUvKn4/AAAAAAAAAAI/AAAAAAAAAAA/R_tylVEOR98/s96-c-mo/photo.jpg',
+            chanel: 'Кинопоиск',
+            title: '"Как снимает Макото Синкай, гений аниме и «второй Миядзаки»"',
+            date: '4 days ago',
+            img: 'https://i.ytimg.com/vi/sAsAdXYAG1c/hqdefault.jpg',
+            url: 'https://www.youtube.com/watch?v=sAsAdXYAG1c',
+          },
+          {
+            logo: 'https://lh5.googleusercontent.com/-p31Ot-UmPks/AAAAAAAAAAI/AAAAAAAAAAA/4bKlgSnfyOs/s96-c-mo/photo.jpg',
+            chanel: 'Громадське',
+            title: '"hromadske": Форум союзників «БАМ!» (бізнес / активізм / медіа)',
+            date: '4 week ago',
+            img: 'https://i.ytimg.com/vi/03s-bhFBQA8/hqdefault_live.jpg',
+            url: 'https://www.youtube.com/watch?v=03s-bhFBQA8',
+          },
         ],
       }
     }

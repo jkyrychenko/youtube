@@ -26,7 +26,13 @@ module.exports = {
         bottom: {
           2: '0.5rem',
         }
-      }
+      },
+      height: {
+        500: '500px'
+      },
+      width: {
+        500: '500px'
+      },
     }
   },
   variants: {

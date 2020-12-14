@@ -11,6 +11,7 @@
       <dropdown-button :icon="icons.create" :dropdown="dropdownItems.create" class="mr-2 text-xl"></dropdown-button>
       <dropdown-button :icon="icons.apps" :dropdown="dropdownItems.apps" class="mr-2 text-xl"></dropdown-button>
       <notification-button :icon="icons.notify" :dropdown="dropdownItems.notify" class="text-xl mr-2"></notification-button>
+      <my-account-button></my-account-button>
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@ import IconButton from '@/components/IconButton.vue'
 import SearchForm from '@/components/SearchForm.vue'
 import DropdownButton from '@/components/DropdownButton.vue'
 import NotificationButton from '@/components/NotificationButton.vue'
+import MyAccountButton from '@/components/MyAccountButton.vue'
 import { faBars, faVideo, faBell, faCaretSquareRight, faBroadcastTower, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { faBuromobelexperte, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
@@ -30,6 +32,7 @@ export default {
     SearchForm,
     DropdownButton,
     NotificationButton,
+    MyAccountButton,
   },
   methods: {
     menuBtnClicked() {

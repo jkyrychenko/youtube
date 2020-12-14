@@ -4,6 +4,7 @@
     <div
       ref="dropdown"
       v-if="dropdown.length && isDropdownVisible"
+      v-click-outside="toggleDropdown"
       class="absolute top-0 right-0 text-base bg-white border-gray-600 border-b border-r border-l mt-12">
         <div
           v-for="item in dropdown"
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import ClickOutside from 'vue-click-outside'
 import IconButton from '@/components/IconButton.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -41,6 +43,12 @@ export default {
     toggleDropdown() {
       this.isDropdownVisible = !this.isDropdownVisible;
     }
+  },
+  mounted () {
+    this.popupItem = this.$el
+  },
+  directives: {
+    ClickOutside,
   },
   data() {
     return {
